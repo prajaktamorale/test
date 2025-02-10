@@ -1,13 +1,20 @@
 username: "${BROWSERSTACK_USERNAME}"
 access_key: "${BROWSERSTACK_ACCESS_KEY}"
+projectName: BrowserStack CI/CD
+buildName: browserstack build 
 platforms:
+  - os: OS X
+    osVersion: Big Sur
+    browserName: Chrome
+    browserVersion: latest
   - os: Windows
     osVersion: 10
-    browserName: Chrome
-    browserVersion: 100.0
-buildName: BStack Build Name
-sessionName: BStack Session Name
-seleniumVersion: 4.0.0
-browserstackLocal: true
-browserStackLocalOptions:
-  - localIdentifier: browserstack_local_identifier
+    browserName: Edge
+    browserVersion: latest
+  - deviceName: Samsung Galaxy S22 Ultra
+    browserName: chrome # Try 'samsung' for Samsung browser
+    osVersion: 12.0
+browserstackLocal: true # <boolean> (Default false)
+debug: false # <boolean> # Set to true if you need screenshots for every selenium command ran
+networkLogs: false # <boolean> Set to true to enable HAR logs capturing
+consoleLogs: errors # <string> Remote browser's console debug levels to be printed (Default: errors)
