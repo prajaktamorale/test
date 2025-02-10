@@ -55,17 +55,3 @@ except Exception as err:
 finally:
     # Stop the driver
     driver.quit()
-
-
-bstack_options = {
-    "os" : "Windows",
-    "local": local,
-    "localIdentifier": localIdentifier,
-    "userName": username,
-    "accessKey": accessKey,
-}
-options = ChromeOptions()
-options.set_capability('bstack:options', bstack_options)
-driver = webdriver.Remote(
-    command_executor="https://hub.browserstack.com/wd/hub",
-    options=options)
