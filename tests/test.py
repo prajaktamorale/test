@@ -1,10 +1,17 @@
 import json
+import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options as ChromeOptions
+
+username = os.environ.get('BROWSERSTACK_USERNAME')
+accessKey = os.environ.get('BROWSERSTACK_ACCESS_KEY')
+local = os.environ.get('BROWSERSTACK_LOCAL')
+localIdentifier = os.environ.get('BROWSERSTACK_LOCAL_IDENTIFIER')
+
  
 # The webdriver management will be handled by the browserstack-sdk
 # so this will be overridden and tests will run browserstack -
@@ -48,3 +55,17 @@ except Exception as err:
 finally:
     # Stop the driver
     driver.quit()
+
+
+bstack_options = {
+    "os" : "Windows",
+    "local": local,
+    "localIdentifier": localIdentifier,
+    "userName": username,
+    "accessKey": accessKey,
+}
+options = ChromeOptions()
+options.set_capability('bstack:options', bstack_options)
+driver = webdriver.Remote(
+    command_executor="https://hub.browserstack.com/wd/hub",
+    options=options)
