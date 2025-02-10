@@ -7,7 +7,7 @@ platforms:
     osVersion: 10
     browserName: Edge
     browserVersion: latest
-browserstackLocal: false # <boolean> (Default false)
-debug: true 
-networkLogs: true # <boolean> Set to true to enable HAR logs capturing
-consoleLogs: true # <string> Remote browser's console debug levels to be printed (Default: errors)
+browserstackLocal: true # <boolean> (Default false)
+#debug: true 
+#networkLogs: true # <boolean> Set to true to enable HAR logs capturing
+#consoleLogs: true # <string> Remote browser's console debug levels to be printed (Default: errors)
