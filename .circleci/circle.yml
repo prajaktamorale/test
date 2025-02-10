@@ -1,0 +1,16 @@
+machine:
+  environment:
+    BROWSERSTACK_USERNAME: "prajaktamorale_NXk7nA"
+    BROWSERSTACK_ACCESS_KEY: "ti12QzfkKvxroLqGGTxj"
+    BROWSERSTACK_LOCAL: true
+    BROWSERSTACK_LOCAL_IDENTIFIER: "identifier"
+
+test:
+    pre:
+    # Download the browserstack binary file
+    - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
+    # Unzip the BrowserStack Local binary file
+    - unzip BrowserStackLocal-linux-x64.zip
+    # Run the file with your access key
+    - ./BrowserStackLocal $BROWSERSTACK_ACCESS_KEY:
+        background: true

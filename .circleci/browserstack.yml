@@ -1,0 +1,13 @@
+userName: prajaktamorale_NXk7nA
+accessKey: ti12QzfkKvxroLqGGTxj
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: 100.0
+buildName: BStack Build Name
+sessionName: BStack Session Name
+seleniumVersion: 4.0.0
+browserstackLocal: true
+browserStackLocalOptions:
+  - localIdentifier: browserstack_local_identifier
