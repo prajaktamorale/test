@@ -1,5 +1,5 @@
-username: prajaktamorale_NXk7nA
-access_key: ti12QzfkKvxroLqGGTxj
+username: "${BROWSERSTACK_USERNAME}"
+access_key: "${BROWSERSTACK_ACCESS_KEY}"
 platforms:
   - os: Windows
     osVersion: 10
@@ -8,6 +8,6 @@ platforms:
 buildName: BStack Build Name
 sessionName: BStack Session Name
 seleniumVersion: 4.0.0
-browserstackLocal: false
+browserstackLocal: true
 browserStackLocalOptions:
   - localIdentifier: browserstack_local_identifier
