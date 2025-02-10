@@ -3,7 +3,7 @@ Run python tests on browserstack using the SDK.
 
 ## Prerequisite
 ```
-python3 should be installed
+python should be installed
 ```
 
 ## Setup
