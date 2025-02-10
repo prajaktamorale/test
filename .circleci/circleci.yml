@@ -1,7 +1,7 @@
 machine:
   environment:
-    username: "${BROWSERSTACK_USERNAME}"
-    access_key: "${BROWSERSTACK_ACCESS_KEY}"
+    username: "prajaktamorale_NXk7nA"
+    access_key: "ti12QzfkKvxroLqGGTxj"
     BROWSERSTACK_LOCAL: true
 test:
     pre:
